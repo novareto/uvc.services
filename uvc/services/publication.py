@@ -62,6 +62,8 @@ class JSONFactory(object):
         accept_language = AcceptLanguage(
             environ.get('HTTP_ACCEPT_LANGUAGE', 'de-DE'))
 
+        # Write a real rule here.
+        # This one doesn't handle OPTIONS or GET
         return 'application/json' in accept
 
     def __call__(self):
